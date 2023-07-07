@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tilt Prism&display=swap">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="banner">
+            <h1 class="hero-text">Architecture tours</h1>
+            <p class="photo-credit">Photo by <a href="https://unsplash.com/@ivrn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ivan Rohovchenko</a> on <a href="https://unsplash.com/photos/ByIRk0OjYbo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+        </div>
+        <main>
+            <section class="blurb">
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h2>
+                <p></p>
+                <h2>Let's do this!</h2>
+            </section>
+            <form>
+                <div class="form-input">
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstname" autocomplete="given-name">
+                </div>
+
+                <div class="form-input">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastname" autocomplete="family-name">
+                </div>
+
+                <div class="form-input">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" autocomplete="email">
+                </div>
+
+                <div class="form-input">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" autocomplete="mobile">
+                </div>
+
+                <div class="form-input">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" autocomplete="new-password">
+                </div>
+
+                <div class="form-input">
+                    <label for="confirmpassword">Confirm password</label>
+                    <input type="password" name="confirmpassword" autocomplete="new-password">
+                    <p class="password-warning">*Passwords do not match</p>
+                </div>
+
+
+                <button type="submit" class="submit" value="Submit">Create Account</button>
+            </form>
+            <p class="login">Already have an Account? <a href="#">Log in</a></p>
+        </main>
+    </div>
+</body>
+</html>

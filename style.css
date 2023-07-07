@@ -1,0 +1,185 @@
+/*
+  VARIABLES DECLARATION ON ROOT
+*/
+:root {
+    --main-bg-color: #c3e4ea;
+    --heading-text-color: #0B2404;
+    --subheading-text-color: #393A40;
+  }
+
+/*
+    COMMON STYLING
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body * {
+    font-family: 'Open Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #0B0C0D;
+    display: block;
+}
+
+a {
+    display: inline;
+}
+
+script {
+    display: none;
+}
+
+/* 
+    MAIN
+*/
+.main-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    max-height: fit-content;
+    
+}
+
+/* 
+    CARD
+*/
+
+.banner {
+    min-width: 40vw;
+    max-width: 100%;
+    background-image: url(./assets/ivan-rohovchenko-ByIRk0OjYbo-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text {
+    font-family: 'Tilt Prism', serif;
+    background-color: rgba(50, 50, 50, 60%);
+    padding: 10vh 0px;
+    color: white;
+    font-size: 5vh;
+    text-align: center;
+}
+
+.photo-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(50, 50, 50, 60%);
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.photo-credit > a {
+    display: inline;
+    color: inherit; /* blue colors for links too */
+}
+
+/* 
+    MAIN(SIGN-UP CARD) SECTION
+*/
+
+main {
+    min-width: 60vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+/*
+    FORM SECTION
+*/
+
+form {
+    height: clamp(300px, fit-content, fit-content);
+    width: clamp(200px, fit-content, 723px);
+
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+form label {
+    text-transform: uppercase;
+    color: #393A40;
+    padding-top: 20px;
+}
+
+input, textarea {
+    height: 39px, fit-content;
+    width: 100%;
+    border-radius: 1px;
+    box-shadow: none;
+    border: solid 1px #C1C1C7;
+    background-color: #FFFFFF;
+    padding: 5px;
+}
+
+button {
+    grid-column: span 2;
+    height: 39px;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #393A40;
+    background-color: var(--main-bg-color);
+    cursor: pointer;
+    align-items: center;
+}
+
+
+/* 
+    ERROR PROMPTER SECTION
+*/
+
+.invalid {
+    border: solid 1px #952106;
+}
+
+.password-warning {
+    visibility: hidden;
+}
+
+.password-warning.invalid {
+    visibility: visible;
+    font-size: 0.8rem;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-color: rgba(247, 46, 60, 0.694);
+    border-radius: 0px 0px 5px 5px;
+}
+
+.login {
+    margin-top: 20px;
+}
+
+
+/* 
+    MOBILE MEDIA QUERY
+*/
+
+@media only screen and (max-width: 750px) {
+   
+.main-container {
+    flex-direction: column;
+}   
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+}
